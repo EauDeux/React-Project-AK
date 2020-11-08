@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'React'
+import React, { useState } from 'React'
 // import PropTypes from 'prop-types'
 
 import CreateNewPost from '../createNewPost'
@@ -8,10 +8,6 @@ const AllPost = () => {
   const [title, setTitle] = useState('')
 
   const [content, setContent] = useState('')
-  useEffect(() => {
-    console.log(title)
-    console.log(content)
-  })
 
   const savePostTitleToState = event => {
     setTitle(event.target.value)

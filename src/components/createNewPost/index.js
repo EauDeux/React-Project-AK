@@ -9,7 +9,7 @@ const CreateNewPost = props => {
         <input
           type='text'
           onChange={props.savePostTitleToState}
-          placeHolder='title'
+          placeholder='title'
           size='39'
           required
         ></input>
@@ -17,7 +17,7 @@ const CreateNewPost = props => {
         <br />
         <textarea
           onChange={props.savePostContentToState}
-          placeHolder='content'
+          placeholder='content'
           rows='8'
           cols='41'
           required
