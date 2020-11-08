@@ -9,6 +9,7 @@ const CreateNewPost = props => {
         <input
           type='text'
           onChange={props.savePostTitleToState}
+          // onChange={e => setTitle(e.target.value)}
           placeholder='title'
           size='39'
           required

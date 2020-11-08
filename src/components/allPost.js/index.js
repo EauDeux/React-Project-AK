@@ -1,22 +1,28 @@
-import React, { useState } from 'React'
+import React, { useState, useEffect } from 'React'
 // import PropTypes from 'prop-types'
 
 import CreateNewPost from '../createNewPost'
 // import Header from '../header'
 
 const AllPost = () => {
-  const [title, setTitle] = useState('')
+  const [title, setTitle] = useState('') // initial state
 
   const [content, setContent] = useState('')
+  // useEffect(() => {
+  //   console.log(title)
+  //   console.log(content)
+  // })
+  useEffect(() => console.log(title), [title])
+  useEffect(() => console.log(content), [content])
 
   const savePostTitleToState = event => {
     setTitle(event.target.value)
-    console.log(title)
+    // console.log(title)
   }
 
   const savePostContentToState = event => {
     setContent(event.target.value)
-    console.log(content)
+    // console.log(content)
   }
 
   return (
