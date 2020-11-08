@@ -18,6 +18,9 @@ const Header = props => {
             <li>
               <Link to='/articles'>Poster un article</Link>
             </li>
+            <li>
+              <Link to='/about'>A propos de nous</Link>
+            </li>
           </ul>
         </nav>
 
