@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 // import PropTypes from 'prop-types'
 
 import CreateNewPost from '../createNewPost'
@@ -6,8 +6,10 @@ import CreateNewPost from '../createNewPost'
 
 const AllPost = () => {
   const [title, setTitle] = useState('') // initial state
-
   const [content, setContent] = useState('')
+  const [allPost, setAllPost] = useState([])
+  const getTitle = useRef()
+  const getContent = useRef()
   // useEffect(() => {
   //   console.log(title)
   //   console.log(content)
@@ -25,11 +27,27 @@ const AllPost = () => {
     // console.log(content)
   }
 
+  // const savePost = () => {
+  //   const id = Date.now()
+  //   setAllPost([...allPost, { title, content, id }])
+  //   console.log(allPost)
+  // }
+  const savePost = event => {
+    event.preventDefault()
+    setAllPost([...allPost, { title, content }])
+    console.log(allPost)
+    getTitle.current.value = ''
+    getContent.current.value = ''
+  }
+
   return (
     <>
       <CreateNewPost
         savePostTitleToState={savePostTitleToState}
         savePostContentToState={savePostContentToState}
+        getTitle={getTitle}
+        getContent={getContent}
+        savePost={savePost}
       />
     </>
   )
