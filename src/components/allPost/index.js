@@ -45,6 +45,13 @@ const AllPost = () => {
     toggleModifyPostComponent()
   }
 
+  const deletePost = id => {
+    const modifiedPost = allPost.filter(eachPost => {
+      return eachPost.id !== id
+    })
+    setAllPost(modifiedPost)
+  }
+
   // const savePost = () => {
   //   const id = Date.now()
   //   setAllPost([...allPost, { title, content, id }])
@@ -85,6 +92,7 @@ const AllPost = () => {
           getTitle={getTitle}
           getContent={getContent}
           savePost={savePost}
+          deletePost={deletePost}
         />
       </>
     )
@@ -118,6 +126,7 @@ const AllPost = () => {
               title={eachPost.title}
               content={eachPost.content}
               editPost={editPost}
+              deletePost={deletePost}
             />
           )
         })
