@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// import AllPost from '../allPost/index.js'
 // import Header from '../header'
 
 const CreateNewPost = props => {
