@@ -52,11 +52,6 @@ const AllPost = () => {
     setAllPost(modifiedPost)
   }
 
-  // const savePost = () => {
-  //   const id = Date.now()
-  //   setAllPost([...allPost, { title, content, id }])
-  //   console.log(allPost)
-  // }
   const savePost = event => {
     event.preventDefault()
     const id = Date.now()
@@ -138,8 +133,4 @@ const AllPost = () => {
   )
 }
 
-// CreateNewPost.propTypes = {
-//   savePostTitleToState: PropTypes.string,
-//   savePostContentToState: PropTypes.string
-// }
 export default AllPost

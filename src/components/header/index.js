@@ -1,6 +1,7 @@
 import React from 'react'
+import { StyledNav, StyledUl, StyledLink } from './Menu.styled'
 
-import './index.css'
+// import './index.css'
 
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import Routes from '../../config/router'
@@ -10,19 +11,19 @@ const Header = props => {
   return (
     <header className='App-header'>
       <Router>
-        <nav>
-          <ul>
-            <li>
+        <StyledNav>
+          <StyledUl>
+            <StyledLink>
               <Link to='/'>Articles</Link>
-            </li>
-            <li>
+            </StyledLink>
+            <StyledLink>
               <Link to='/articles'>Poster un article</Link>
-            </li>
-            <li>
+            </StyledLink>
+            <StyledLink>
               <Link to='/about'>A propos de nous</Link>
-            </li>
-          </ul>
-        </nav>
+            </StyledLink>
+          </StyledUl>
+        </StyledNav>
 
         <Routes></Routes>
       </Router>
