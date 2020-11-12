@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledNav, StyledUl, StyledLink } from './Menu.styled'
+import { StyledNav, StyledUl, StyledLink } from './Nav.styled'
 
 // import './index.css'
 
