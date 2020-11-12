@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyledNav, StyledUl, StyledLink } from './Nav.styled'
+import Logout from '../logout'
 
 // import './index.css'
 
@@ -14,7 +15,7 @@ const Header = props => {
         <StyledNav>
           <StyledUl>
             <StyledLink>
-              <Link to='/'>Articles</Link>
+              <Link to='/'>Home</Link>
             </StyledLink>
             <StyledLink>
               <Link to='/articles'>Poster un article</Link>
@@ -23,6 +24,9 @@ const Header = props => {
               <Link to='/about'>A propos de nous</Link>
             </StyledLink>
           </StyledUl>
+          <StyledLink>
+            <Logout></Logout>
+          </StyledLink>
         </StyledNav>
 
         <Routes></Routes>
