@@ -81,6 +81,7 @@ const AllPost = () => {
   if (isCreateNewPost) {
     return (
       <>
+        <h1>Poster un nouvel article</h1>
         <CreateNewPost
           savePostTitleToState={savePostTitleToState}
           savePostContentToState={savePostContentToState}
@@ -107,7 +108,7 @@ const AllPost = () => {
   }
   return (
     <>
-      <h2>All Posts</h2>
+      <h1>Tous les articles</h1>
       {!allPost.length ? (
         <div>
           <h3>Il n y a pas encore d articles</h3>
