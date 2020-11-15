@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
 // import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 import PropTypes from 'prop-types'
+
+import { StyledForm, StyledSpan, SigninInput } from './Form.Styled'
 
 // eslint-disable-next-line no-unused-vars
 const Signin = ({ submit }) => {
@@ -16,7 +17,7 @@ const Signin = ({ submit }) => {
 
   return (
     <StyledForm onSubmit={e => submit(e, formState, setErrorMessage, history)}>
-      <StyledSpan>Signin</StyledSpan>
+      <StyledSpan>Connexion</StyledSpan>
       <SigninInput
         placeholder='username'
         // onChange={e => setUserName(e.target.value)}
@@ -35,27 +36,6 @@ const Signin = ({ submit }) => {
   )
 }
 
-const StyledSpan = styled.span`
-  color: green;
-  margin-bottom: 12px;
-`
-
-const StyledForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
-
-const SigninInput = styled.input`
-  margin: 6px 0px;
-  border-radius: 12px;
-  border: none;
-  background-color: black;
-  heignt: 30px;
-  color: white;
-  padding: 0px 6px;
-`
 Signin.propTypes = {
   submit: PropTypes.any
 }
