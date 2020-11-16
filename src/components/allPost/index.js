@@ -6,6 +6,8 @@ import Post from '../post'
 import UpdatedPost from '../updatePost'
 // import Header from '../header'
 
+import { StyledH1, StyledH3, Button } from './AllPost.styled'
+
 const AllPost = () => {
   const [title, setTitle] = useState('') // initial state
   const [content, setContent] = useState('')
@@ -108,10 +110,10 @@ const AllPost = () => {
   }
   return (
     <>
-      <h1>Tous les articles</h1>
+      <StyledH1>Tous les articles</StyledH1>
       {!allPost.length ? (
         <div>
-          <h3>Il n y a pas encore d articles</h3>
+          <StyledH3>Il n y a pas encore d articles</StyledH3>
         </div>
       ) : (
         allPost.map(eachPost => {
@@ -129,7 +131,7 @@ const AllPost = () => {
       )}
       <br />
       <br />
-      <button onClick={toggleCreateNewPost}>Create New</button>
+      <Button onClick={toggleCreateNewPost}>Ajouter un article</Button>
     </>
   )
 }
