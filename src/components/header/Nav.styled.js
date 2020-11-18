@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledNav = styled.nav`
-  background-color: #476883;
+  background-color: ${props => props.theme.primary};
   width: 100%;
   height: 50px;
   display: flex;

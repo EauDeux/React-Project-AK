@@ -83,7 +83,8 @@ const AllPost = () => {
   if (isCreateNewPost) {
     return (
       <>
-        <h1>Poster un nouvel article</h1>
+        <StyledH1>Poster un nouvel article</StyledH1>
+
         <CreateNewPost
           savePostTitleToState={savePostTitleToState}
           savePostContentToState={savePostContentToState}

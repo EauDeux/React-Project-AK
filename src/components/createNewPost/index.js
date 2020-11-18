@@ -3,33 +3,40 @@ import PropTypes from 'prop-types'
 // import AllPost from '../allPost/index.js'
 // import Header from '../header'
 
+import {
+  StyledForm,
+  StyledButton,
+  StyledInput,
+  StyledTextArea
+} from './FormNewPost.styled'
+
 const CreateNewPost = props => {
   return (
     <div>
-      <form onSubmit={props.savePost}>
-        <input
+      <StyledForm onSubmit={props.savePost}>
+        <StyledInput
           type='text'
           onChange={props.savePostTitleToState}
           // onChange={e => setTitle(e.target.value)}
           placeholder='Titre'
-          size='39'
+          // size='39'
           required
           ref={props.getTitle}
-        ></input>
+        ></StyledInput>
         <br />
         <br />
-        <textarea
+        <StyledTextArea
           onChange={props.savePostContentToState}
           placeholder='Contenu'
-          rows='8'
-          cols='41'
+          // rows='8'
+          // cols='41'
           required
           ref={props.getContent}
-        ></textarea>
+        ></StyledTextArea>
         <br />
         <br />
-        <button>Enregistrer</button>
-      </form>
+        <StyledButton>Enregistrer</StyledButton>
+      </StyledForm>
     </div>
   )
 }

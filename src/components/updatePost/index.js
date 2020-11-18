@@ -1,33 +1,41 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import {
+  StyledForm,
+  StyledButton,
+  StyledInput,
+  StyledTextArea,
+  StyledH1
+} from './UpdatePost.styled'
+
 const UpdatePost = props => {
   return (
     <>
-      <form>
-        <h1>Modification de l article</h1>
-        <input
+      <StyledH1>Modification de l article</StyledH1>
+      <StyledForm>
+        <StyledInput
           defaultValue={props.title}
           onChange={props.savePostTitleToState}
           type='text'
           placeholder='Titre'
-          size='39'
+          // size='39'
           required
-        ></input>
+        ></StyledInput>
         <br />
         <br />
-        <textarea
+        <StyledTextArea
           defaultValue={props.content}
           onChange={props.savePostContentToState}
           placeholder='Contenu'
           rows='8'
           cols='41'
           required
-        ></textarea>
+        ></StyledTextArea>
         <br />
         <br />
-        <button onClick={props.updatePost}>Modifier</button>
-      </form>
+        <StyledButton onClick={props.updatePost}>Modifier</StyledButton>
+      </StyledForm>
     </>
   )
 }

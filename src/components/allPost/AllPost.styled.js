@@ -7,6 +7,7 @@ export const StyledH1 = styled.h1`
   margin-bottom: 5%;
   font-weight: bold;
   font-size: 30px;
+  flex-wrap: nowrap;
 `
 
 export const StyledH3 = styled.h3`
@@ -26,4 +27,5 @@ export const Button = styled.button`
   display: block;
   margin-left: auto;
   margin-right: auto;
+  clear: both;
 `
